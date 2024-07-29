@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI思考最適化日記</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>AI思考最適化日記</h1>
+        <nav>
+            <button id="dashboard-btn" class="active">ダッシュボード</button>
+            <button id="chat-btn">チャット</button>
+            <button id="network-btn">ネットワーク図</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="dashboard" class="active">
+            <div class="diary-input">
+                <h2>日記入力</h2>
+                <textarea id="diary-text" placeholder="今日の思考や出来事を記録してください..."></textarea>
+            </div>
+            <div class="emotion-tracker">
+                <h2>感情トラッカー</h2>
+                <div class="emotion-scale">
+                    <button class="emotion" data-value="1">😢</button>
+                    <button class="emotion" data-value="2">😕</button>
+                    <button class="emotion" data-value="3">😐</button>
+                    <button class="emotion" data-value="4">🙂</button>
+                    <button class="emotion" data-value="5">😄</button>
+                </div>
+            </div>
+            <div class="ai-insights">
+                <h2>AI洞察</h2>
+                <p id="ai-insight-text">あなたの日記を分析中です...</p>
+            </div>
+            <div class="quick-actions">
+                <button id="thought-organize">思考整理</button>
+                <button id="goal-setting">目標設定</button>
+                <button id="music-analysis">音楽分析</button>
+                <button id="action-plan">行動計画</button>
+            </div>
+        </section>
+
+        <section id="chat">
+            <div class="chat-container">
+                <div id="chat-messages"></div>
+                <div class="chat-input">
+                    <input type="text" id="user-input" placeholder="AIと対話を始めましょう...">
+                    <button id="send-message">送信</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="network">
+            <div id="network-container"></div>
+            <div class="network-controls">
+                <button id="zoom-in">拡大</button>
+                <button id="zoom-out">縮小</button>
+                <select id="filter-select">
+                    <option value="all">すべて</option>
+                    <option value="thoughts">思考</option>
+                    <option value="emotions">感情</option>
+                    <option value="actions">行動</option>
+                </select>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="scripts/dashboard.js"></script>
+</body>
+
+</html>

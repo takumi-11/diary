@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI日記システム - 分析レポート</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>分析レポート</h1>
+
+        <section class="emotion-graph">
+            <h2>感情グラフ</h2>
+            <canvas id="emotion-chart"></canvas>
+            <!-- グラフ表示エリア -->
+        </section>
+
+        <section class="behavior-analysis">
+            <h2>行動パターン分析</h2>
+            <p>生産性ピーク時間: 午前10時〜午後1時</p>
+            <p>集中力低下のトリガー: 午後3時以降、会議後</p>
+        </section>
+
+        <section class="word-cloud">
+            <h2>ワードクラウド</h2>
+            <div id="word-cloud-container"></div>
+            <!-- ワードクラウド表示エリア -->
+        </section>
+
+        <section class="correlation-analysis">
+            <h2>相関分析</h2>
+            <p>活動と気分の相関係数: 運動: 0.8, 音楽鑑賞: 0.6</p>
+            <canvas id="correlation-chart"></canvas>
+            <!-- 相関グラフ表示エリア -->
+        </section>
+
+    </div>
+    <script src="scripts/analysis.js"></script>
+</body>
+
+</html>

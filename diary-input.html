@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI日記システム - 日記入力</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>日記を書く</h1>
+        <form id="diary-form">
+            <div class="form-group">
+                <label for="content">内容:</label>
+                <textarea id="content" name="content" rows="10" placeholder="今日はどんな一日でしたか？"></textarea>
+            </div>
+            <div class="ai-suggestions">
+                <p>AIからの質問:</p>
+                <ul>
+                    <li>今日の最大の成果は？</li>
+                    <li>何か新しい気づきはありましたか？</li>
+                </ul>
+            </div>
+            <div class="form-group">
+                <label for="emotion">感情:</label>
+                <input type="range" id="emotion" name="emotion" min="1" max="5" value="3">
+                <span id="emotion-value">普通</span>
+                <select id="emotion-detail" name="emotion-detail">
+                    <option value="happy">喜び</option>
+                    <option value="sad">悲しみ</option>
+                    <option value="angry">怒り</option>
+                    <option value="calm">穏やか</option>
+                    <option value="tired">疲れた</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="tags">タグ:</label>
+                <input type="text" id="tags" name="tags" placeholder="タグを入力">
+                <div class="tag-suggestions">
+                    <p>タグの提案:</p>
+                    <ul>
+                        <li>仕事</li>
+                        <li>学習</li>
+                        <li>健康</li>
+                    </ul>
+                </div>
+            </div>
+            <button type="submit">記録する</button>
+        </form>
+    </div>
+    <script src="scripts/diary-input.js"></script>
+</body>
+
+</html>
